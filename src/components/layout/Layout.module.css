@@ -1,0 +1,44 @@
+.appContainer {
+  min-height: 100vh;
+  padding: 2rem 1rem; 
+}
+
+.mainContent {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.pokemonGrid {
+  display: grid;
+  gap: 1.5rem; 
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .pokemonGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemonGrid {
+    grid-template-columns: 1fr;
+  }
+}
