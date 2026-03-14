@@ -8,7 +8,7 @@ interface PokemonCardProps {
 }
 
 const PokemonCard = ({ id, name, image }: PokemonCardProps) => {
- 
+
   const formattedId = `#${String(id).padStart(4, '0')}`;
 
   return (

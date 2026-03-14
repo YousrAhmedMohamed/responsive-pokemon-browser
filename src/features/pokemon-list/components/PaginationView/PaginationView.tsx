@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { usePokemonPagination } from '../../../../hooks/usePokemon';
 import Pagination from './Pagination';
-import styles from '../../../../components/layout/Layout.module.css'; 
+import styles from '../../../../components/layout/Layout.module.css';
 import PokemonCard from '../../../../components/pokemonCard/PokemonCard';
 const PaginationView = () => {
   const [page, setPage] = useState(1);

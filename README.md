@@ -9,6 +9,7 @@ A high-performance, pixel-perfect Pokédex application built with **React 18**, 
 * **Dedicated Detail Routing:** Functional dedicated detail pages for every Pokémon with unique URLs, allowing for deep linking and browser history support.
 * **Optimized Loading States:** Custom **Rectangular Shimmer Skeletons** designed to match the specific layout dimensions, minimizing Cumulative Layout Shift (CLS).
 * **Modern Data Fetching:** Fully implemented using `useSuspenseQuery` and `useSuspenseInfiniteQuery` for a declarative, high-performance data-fetching strategy.
+* **Graceful Error Handling:** Integrated `react-error-boundary` to catch runtime errors and provide a fallback UI without crashing the entire application.
 
 ## 🛠 Tech Stack
 
@@ -57,3 +58,5 @@ The project uses a strict TypeScript implementation. I defined comprehensive int
 
 ## 🔗 Live Demo
 [View Live Project](responsive-pokemon-browser-mu41jyc7n.vercel.app)
+
+https://github.com/YousrAhmedMohamed/responsive-pokemon-browser

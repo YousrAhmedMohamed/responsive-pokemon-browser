@@ -20,7 +20,7 @@ const LoadMoreView = () => {
   } = usePokemonInfinite(20);
 
 
-const handleLoadMore = () => {
+  const handleLoadMore = () => {
     startTransition(() => {
       fetchNextPage();
     });
@@ -49,30 +49,30 @@ const handleLoadMore = () => {
         ))}
       </div>
 
-  <div className={styles.loadMoreWrapper}>
-  {isLoadingMore ? (
-    <div className={styles.loaderContainer}>
-      <PaginationSpinner />
-      <p className={styles.loadingText}>Loading more Pokemon...</p>
-      <p className={styles.showingText}>
-        Showing {data?.pages.flatMap(p => p.results).length} Pokemon
-      </p>
-    </div>
-  ) : (
-    <>
-      {hasNextPage ? (
-        <button
-        onClick={handleLoadMore}
-        className={styles.loadMoreBtn}
-        >
-          Load More Pokemon
-        </button>
-      ) : (
-        <p className={styles.noMoreText}>All Pokemon have been loaded.</p>
-      )}
-    </>
-  )}
-</div>
+      <div className={styles.loadMoreWrapper}>
+        {isLoadingMore ? (
+          <div className={styles.loaderContainer}>
+            <PaginationSpinner />
+            <p className={styles.loadingText}>Loading more Pokemon...</p>
+            <p className={styles.showingText}>
+              Showing {data?.pages.flatMap(p => p.results).length} Pokemon
+            </p>
+          </div>
+        ) : (
+          <>
+            {hasNextPage ? (
+              <button
+                onClick={handleLoadMore}
+                className={styles.loadMoreBtn}
+              >
+                Load More Pokemon
+              </button>
+            ) : (
+              <p className={styles.noMoreText}>All Pokemon have been loaded.</p>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

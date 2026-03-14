@@ -21,13 +21,13 @@ const PokemonDetailsPage = () => {
 
         <div className={styles.mainContent}>
           <div className={styles.imageSection}>
-            <img 
-              src={pokemon.sprites.other['official-artwork'].front_default} 
-              alt={pokemon.name} 
+            <img
+              src={pokemon.sprites.other['official-artwork'].front_default}
+              alt={pokemon.name}
               className={styles.pokemonImg}
             />
             <div className={styles.typeBadge}>Fire</div>
-            
+
             <div className={styles.physicalInfo}>
               <div className={styles.infoBox}>
                 <div>📏 Height</div>
@@ -46,9 +46,9 @@ const PokemonDetailsPage = () => {
               <div key={s.stat.name} className={styles.statRow}>
                 <span className={styles.statLabel}>{s.stat.name.toUpperCase()}</span>
                 <div className={styles.barContainer}>
-                  <div 
-                    className={styles.barFill} 
-                    style={{ width: `${(s.base_stat / 200) * 100}%` }} 
+                  <div
+                    className={styles.barFill}
+                    style={{ width: `${(s.base_stat / 200) * 100}%` }}
                   />
                 </div>
                 <span className={styles.statValue}>{s.base_stat}</span>

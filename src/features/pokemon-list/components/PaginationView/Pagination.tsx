@@ -43,7 +43,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
   return (
     <div className={styles.paginationContainer}>
       <div className={styles.pagesWrapper}>
-        <button 
+        <button
           className={styles.navBtn}
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
@@ -53,7 +53,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
 
         {renderPageNumbers()}
 
-        <button 
+        <button
           className={styles.navBtn}
           disabled={currentPage === totalPages}
           onClick={() => onPageChange(currentPage + 1)}
