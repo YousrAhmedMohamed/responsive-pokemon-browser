@@ -3,6 +3,8 @@ import styles from './Pagination.module.css';
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
+  disablePrev?: boolean;
+  disableNext?: boolean;
   onPageChange: (page: number) => void;
 }
 

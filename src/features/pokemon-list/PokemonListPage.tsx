@@ -15,20 +15,30 @@ const PokemonListPage = () => {
 
   return (
     <Layout>
-      <div className={styles.filterContainer}>
-        <button 
-          onClick={() => setViewMode('pagination')}
-          className={`${styles.button} ${viewMode === 'pagination' ? styles.activeBtn : ''}`}
-        >
-          Page Controls
-        </button>
-        <button 
-          onClick={() => setViewMode('loadMore')}
-          className={`${styles.button} ${viewMode === 'loadMore' ? styles.activeBtn : ''}`}
-        >
-          Infinite Scroll (Load More)
-        </button>
-      </div>
+    <header className={styles.headerSection}>
+        <div className={styles.titleContainer}>
+          <span className={styles.titleIcon}>⚡</span>
+          <h1 className={styles.mainTitle}>Pokédex</h1>
+        </div>
+        <p className={styles.subtitle}>
+          Discover and explore Pokemon with {viewMode === 'loadMore' ? 'infinite scroll' : 'pagination'}
+        </p>
+
+        <div className={styles.filterContainer}>
+          <button 
+            onClick={() => setViewMode('pagination')}
+            className={`${styles.button} ${viewMode === 'pagination' ? styles.activeBtn : ''}`}
+          >
+            Page Controls
+          </button>
+          <button 
+            onClick={() => setViewMode('loadMore')}
+            className={`${styles.button} ${viewMode === 'loadMore' ? styles.activeBtn : ''}`}
+          >
+            Infinite Scroll
+          </button>
+        </div>
+        </header>
       {viewMode === 'pagination' ? (
         <Suspense fallback={<PaginationSpinner />}>
           <PaginationView />

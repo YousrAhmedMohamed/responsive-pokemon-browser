@@ -1,3 +1,12 @@
+export interface Ability {
+  ability: {
+    name: string;
+    url: string;
+  };
+  is_hidden: boolean;
+  slot: number;
+}
+
 export interface PokemonListItem {
   name: string;
   url: string;
@@ -16,6 +25,7 @@ export interface PokemonDetail {
   height: number;
   weight: number;
   base_experience: number;
+  abilities: Ability[];
   sprites: {
     front_default: string;
     other: {

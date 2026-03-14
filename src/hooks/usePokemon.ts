@@ -1,5 +1,5 @@
-import { useQuery, useSuspenseInfiniteQuery, keepPreviousData } from '@tanstack/react-query';
-import { fetchPokemonWithDetails } from '../api/pokemonApi';
+import { useQuery, useSuspenseInfiniteQuery, keepPreviousData, useSuspenseQuery } from '@tanstack/react-query';
+import { fetchPokemonDetails, fetchPokemonWithDetails } from '../api/pokemonApi';
 
 export const usePokemonPagination = (page: number, limit: number = 20) => {
   const offset = (page - 1) * limit;
@@ -21,5 +21,13 @@ export const usePokemonInfinite = (limit: number = 20) => {
       const url = new URL(lastPage.next);
       return parseInt(url.searchParams.get('offset') || '0');
     },
+  });
+};
+
+
+export const usePokemonDetail = (name: string) => {
+  return useSuspenseQuery({
+    queryKey: ['pokemon', name],
+    queryFn: () =>fetchPokemonDetails(name),
   });
 };

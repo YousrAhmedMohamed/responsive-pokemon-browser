@@ -19,6 +19,8 @@ export const fetchPokemonDetails = async (idOrName: string | number): Promise<Po
   return response.data;
 };
 
+
+
 export const fetchPokemonWithDetails = async (limit: number, offset: number) => {
   const listData = await fetchPokemonList(limit, offset);
   
