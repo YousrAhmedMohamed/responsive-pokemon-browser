@@ -57,6 +57,4 @@ The project uses a strict TypeScript implementation. I defined comprehensive int
 * Support for **Dark Mode** using CSS variables.
 
 ## 🔗 Live Demo
-[View Live Project](responsive-pokemon-browser-mu41jyc7n.vercel.app)
-
-https://github.com/YousrAhmedMohamed/responsive-pokemon-browser
+[View Live Project](https://responsive-pokemon-browser-bfhqpbyym.vercel.app/)
