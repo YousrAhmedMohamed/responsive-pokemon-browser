@@ -1,0 +1,65 @@
+
+@keyframes shine {
+  to { background-position-x: -200%; }
+}
+
+.shimmerBase {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+  border-radius: 0.4rem;
+}
+
+
+.skeletonCard {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+}
+
+.textLineMain {
+  height: 1rem;
+  width: 85%;
+}
+
+.textLineSub {
+  height: 0.8rem;
+  width: 50%;
+  margin-top: -0.25rem;
+}
+
+
+.spinnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+  gap: 1rem;
+}
+
+.greenSpinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 4px solid #d1fae5;
+  border-top: 4px solid #10b981;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

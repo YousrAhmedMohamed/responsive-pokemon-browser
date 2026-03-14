@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; 
+  width: 100%;
+}
+
+.loadingText {
+  color: #065f46; 
+  font-weight: 500;
+  margin: 0;
+}
+
+.showingText {
+  color: #065f46;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.noMoreText {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 2rem;
+  font-style: italic;
+}

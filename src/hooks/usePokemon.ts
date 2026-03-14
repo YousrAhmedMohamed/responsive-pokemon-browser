@@ -1,6 +1,5 @@
-import { useQuery, useInfiniteQuery, keepPreviousData } from '@tanstack/react-query';
+import { useQuery, useSuspenseInfiniteQuery, keepPreviousData } from '@tanstack/react-query';
 import { fetchPokemonWithDetails } from '../api/pokemonApi';
-
 
 export const usePokemonPagination = (page: number, limit: number = 20) => {
   const offset = (page - 1) * limit;
@@ -13,7 +12,7 @@ export const usePokemonPagination = (page: number, limit: number = 20) => {
 }
 
 export const usePokemonInfinite = (limit: number = 20) => {
-  return useInfiniteQuery({
+  return useSuspenseInfiniteQuery({
     queryKey: ['pokemon', 'infinite'],
     queryFn: ({ pageParam = 0 }) => fetchPokemonWithDetails(limit, pageParam),
     initialPageParam: 0,
